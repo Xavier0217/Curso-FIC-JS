@@ -86,11 +86,17 @@
         <div class="total">
             <h2>Desconto: R$ <span id="total-desconto">0.00</span></h2>
         </div>
+
+        <div class="total">
+            <h2>Total: R$ <span id="valor-total">0.00</span></h2>
+        </div>
     </div>
 </body>
 
 <script>
     let valorTotal = 0.0;
+    let desconto = 0.0
+
     const totalHtml = document.getElementById("total")
 
     const cupons = [
@@ -124,8 +130,25 @@
     }
 
     function aplicar_cupom() {
-        const cupom = document.getElementById("cupom").value
-        alert(cupom)
+        const codigo = document.getElementById("cupom").value
+
+        for (let i=0; i < cupons.length; i++) {
+            const cupom = cupons[i]
+
+            if (cupom.codigo == codigo) {
+                // fornece o desconto
+                desconto = cupom.desconto
+            }
+        }
+
+        const valorDesconto = valorTotal * desconto
+        valorTotal = valorTotal - valorDesconto
+
+        const descontoHtml = document.getElementById("total-desconto")
+        descontoHtml.textContent = valorDesconto.toFixed(2)
+
+        const totalHtml = document.getElementById("valor-total")
+        totalHtml.textContent = valorTotal.toFixed(2)
     }
 </script>
 </html>
