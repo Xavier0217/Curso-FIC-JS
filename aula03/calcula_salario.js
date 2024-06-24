@@ -10,4 +10,4 @@ const funcionario = {
 
 const aumento = calcular_aumento(5657, 0.25) 
 
-console.log(`Parabéns ${funcionario.nome} você ganhou um aumento de! o seu salário atual é: R$${aumento}`)
+console.log(`Parabéns ${funcionario.nome} você ganhou um aumento! o seu salário atual é: R$${aumento}, não é o antigo é o atual`)
