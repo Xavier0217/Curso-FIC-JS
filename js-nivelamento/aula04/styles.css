@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.totem {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 420px;
+    text-align: center;
+    max-width: 90%; /* Para ajustar o tamanho máximo */
+}
+
+h1 {
+    color: #333;
+}
+
+.items {
+    max-height: 300px; /* Limita a altura dos itens para scroll se necessário */
+    overflow-y: auto; /* Adiciona scroll vertical se necessário */
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item span {
+    flex: 1; /* Ocupa o espaço disponível, empurrando os botões para a direita */
+}
+
+.item .btn {
+    margin-left: 5px; /* Adiciona um pequeno espaçamento entre os botões */
+}
+
+
+.btn-group {
+    display: flex;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.total {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+}

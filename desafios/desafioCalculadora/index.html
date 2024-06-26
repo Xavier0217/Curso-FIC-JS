@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-display">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="calculator-buttons">
+            <button class="btn function" onclick="apagar()">AC</button>
+            <button class="btn function">+/-</button>
+            <button class="btn function" onclick="mostrar_display('%')">%</button>
+            <button class="btn operator" onclick="mostrar_display('/')">÷</button>
+
+            <button class="btn number" onclick="mostrar_display(7)">7</button>
+            <button class="btn number" onclick="mostrar_display(8)">8</button>
+            <button class="btn number" onclick="mostrar_display(9)">9</button>
+            <button class="btn operator" onclick="mostrar_display('*')">×</button>
+
+            <button class="btn number"onclick="mostrar_display(4)">4</button>
+            <button class="btn number" onclick="mostrar_display(5)">5</button>
+            <button class="btn number"onclick="mostrar_display(6)">6</button>
+            <button class="btn operator" onclick="mostrar_display('-')">−</button>
+
+            <button class="btn number" onclick="mostrar_display(1)">1</button>
+            <button class="btn number" onclick="mostrar_display(2)">2</button>
+            <button class="btn number" onclick="mostrar_display(3)">3</button>
+            <button class="btn operator" onclick="mostrar_display('+')">+</button>
+
+            <button class="btn number zero" onclick="mostrar_display(0)">0</button>
+            <button class="btn number" >.</button>
+            <button class="btn operator" onclick="calcular()">=</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
