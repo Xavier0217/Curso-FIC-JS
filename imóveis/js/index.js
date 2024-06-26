@@ -111,5 +111,3 @@ function favoritar(imovel) {
         fav.setAttribute("src", "img/favorito.png")
     }
 }
-
-
