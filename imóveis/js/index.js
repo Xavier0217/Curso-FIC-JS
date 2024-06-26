@@ -1,6 +1,6 @@
 const imoveis = buscarTodosImoveis()
 
-function criarImovelHTML(imovel) {
+function criarImovelHTML(imovel, id) {
     const section = document.createElement("section")
     section.setAttribute("class", "listing")
 
@@ -31,7 +31,10 @@ function criarImovelHTML(imovel) {
     section.appendChild(a)
 
     // Section favorito
+
+    const favId = `fav-${imovel.id}`
     const favorito = document.createElement("img")
+    favorito.setAttribute("id", favId)
     favorito.setAttribute("src", "img/naoFavorito.png")
     favorito.setAttribute("class", "favorito")
     favorito.setAttribute("onclick", `favoritar(${JSON.stringify(imovel)})`)
@@ -99,7 +102,14 @@ function limparListaImoveis() {
 mostrarTodosOsImoveis()
 
 function favoritar(imovel) {
-    alert(imovel.nome)
+    const favId = `fav-${imovel.id}`
+    const fav = document.getElementById(favId)
+
+    if (fav.getAttribute("src") == "img/favorito.png") {
+        fav.setAttribute("src", "img/naofavorito.png")
+    } else {
+        fav.setAttribute("src", "img/favorito.png")
+    }
 }
 
 
