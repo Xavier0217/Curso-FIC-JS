@@ -30,6 +30,13 @@ function criarImovelHTML(imovel) {
 
     section.appendChild(a)
 
+    // Section favorito
+    const favorito = document.createElement("img")
+    favorito.setAttribute("src", "img/naoFavorito.png")
+    favorito.setAttribute("class", "favorito")
+    favorito.setAttribute("onclick", `favoritar(${JSON.stringify(imovel)})`)
+    section.appendChild(favorito)
+
     // Section pai
     const sectionResults = document.getElementById("lista-imoveis")
     sectionResults.appendChild(section)
@@ -90,3 +97,9 @@ function limparListaImoveis() {
 
 
 mostrarTodosOsImoveis()
+
+function favoritar(imovel) {
+    alert(imovel.nome)
+}
+
+

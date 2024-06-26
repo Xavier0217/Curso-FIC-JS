@@ -19,20 +19,16 @@
 
         <section class="content">
             <article>
-                <img src="img/1.jpg" alt="Foto" class="listing-photo">
+                <img src="img/1.jpg" alt="Foto" class="listing-photo" id="img">
 
                 <section class="listing-description">
-                    <h2 class="listing-heading">Casa 01</h2>
-                    <p class="listing-location">Piracicaba - São Paulo</p>
+                    <h2 class="listing-heading" id="titulo">Casa 01</h2>
+                    <p class="listing-location" id="localizacao">Piracicaba - São Paulo</p>
                 </section>
 
                 <section class="listing-features">
                     <h2 class="section-heading">Informações adicionais</h2>
-                    <ul>
-                        <li>Quartos disponíveis: 2</li>
-                        <li>Possui Wifi: Sim</li>
-                        <li>Tem lavanderia: sim</li>
-                    </ul>
+                    <ul id="lista-adicionais"></ul>
                 </section>
 
             </article>
@@ -43,5 +39,9 @@
 </body>
 
 <script src="js/detalhes.js"></script>
+<script src="js/imoveis.js"></script>
+<script>
+    buscarImovel()
+</script>
 
 </html>
