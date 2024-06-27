@@ -30,8 +30,6 @@ function criarImovelHTML(imovel, id) {
 
     section.appendChild(a)
 
-    // Section favorito
-
     const favId = `fav-${imovel.id}`
     const favorito = document.createElement("img")
     favorito.setAttribute("id", favId)
@@ -40,7 +38,6 @@ function criarImovelHTML(imovel, id) {
     favorito.setAttribute("onclick", `favoritar(${JSON.stringify(imovel)})`)
     section.appendChild(favorito)
 
-    // Section pai
     const sectionResults = document.getElementById("lista-imoveis")
     sectionResults.appendChild(section)
 }
@@ -58,21 +55,26 @@ function filtrarComEnter(tecla) {
 }
 
 function listarImoveisComFiltro(texto) {
-
     limparListaImoveis()
 
-    if (texto == "") {
-        mostrarTodosOsImoveis()
-    } else {
-        for (let i=0; i < imoveis.length; i++) {
-            const imovel = imoveis[i]
+    const filtroCasa = document.getElementById("filtroCasa").checked
+    const filtroApartamento = document.getElementById("filtroApartamento").checked
 
-            const textoM = removerAcentos(texto.toUpperCase())
-            const cidadeImovelM = removerAcentos(imovel.cidade.toUpperCase())
-            const estadoImovelM = removerAcentos(imovel.estado.toUpperCase())
-    
-            if (cidadeImovelM.search(textoM) == 0 ||
-                estadoImovelM.search(textoM) == 0) {
+    const mostrarTodos = !filtroCasa && !filtroApartamento
+
+    for (let i = 0; i < imoveis.length; i++) {
+        const imovel = imoveis[i]
+
+        const textoIM = removerAcentos(texto.toUpperCase())
+        const nomeImoveIM = removerAcentos(imovel.nome.toUpperCase())
+        const cidadeImovelIM = removerAcentos(imovel.cidade.toUpperCase())
+        const estadoImovelIM = removerAcentos(imovel.estado.toUpperCase())
+
+        const tipoImovel = imovel.tipoImovel.toLowerCase()
+
+        if (mostrarTodos || (filtroCasa && tipoImovel === "casa") || (filtroApartamento && tipoImovel === "apartamento")) {
+            
+            if (texto === "" || nomeImoveIM.includes(textoIM) || cidadeImovelIM.includes(textoIM) || estadoImovelIM.includes(textoIM)) {
                 criarImovelHTML(imovel)
             }
         }
@@ -84,9 +86,10 @@ function removerAcentos(str) {
 }
 
 function mostrarTodosOsImoveis() {
-    for (let i=0; i < imoveis.length; i++) {
+    for (let i = 0; i < imoveis.length; i++) {
         const imovel = imoveis[i]
         criarImovelHTML(imovel)
+
     }
 }
 
@@ -97,7 +100,6 @@ function limparListaImoveis() {
         sectionResults.removeChild(sectionResults.lastElementChild)
     }
 }
-
 
 mostrarTodosOsImoveis()
 

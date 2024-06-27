@@ -5,6 +5,7 @@ const imoveisDB = [
         "nome": "Sobrado lindo",
         "cidade": "Saltinho",
         "estado": "Minas Gerais",
+        "tipoImovel": "Casa",
         "adicionais": 
         [
             {
@@ -23,6 +24,7 @@ const imoveisDB = [
         "nome": "Kitnet Economico",
         "cidade": "Charqueada",
         "estado": "São Paulo",
+        "tipoImovel": "Apartamento",
         "adicionais": 
         [
             {
@@ -37,6 +39,7 @@ const imoveisDB = [
         "nome": "Casarão na floresta",
         "cidade": "Americana",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais":
         [
         {
@@ -59,6 +62,7 @@ const imoveisDB = [
         "nome": "Casa 04",
         "cidade": "Nova Odessa",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     },
     {
@@ -67,6 +71,7 @@ const imoveisDB = [
         "nome": "Casa 05",
         "cidade": "Piracicaba",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     },
     {
@@ -75,6 +80,7 @@ const imoveisDB = [
         "nome": "Casa 06",
         "cidade": "Cabreúva",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     },
     {
@@ -83,6 +89,7 @@ const imoveisDB = [
         "nome": "Casa 07",
         "cidade": "Sumaré",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     },
     {
@@ -91,6 +98,7 @@ const imoveisDB = [
         "nome": "Casa 08",
         "cidade": "Piracicaba",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     },
     {
@@ -99,6 +107,7 @@ const imoveisDB = [
         "nome": "Casa 09",
         "cidade": "Sumaré",
         "estado": "São Paulo",
+        "tipoImovel": "Apartamento",
         "adicionais": []
     },
     {
@@ -107,6 +116,7 @@ const imoveisDB = [
         "nome": "Casa 10",
         "cidade": "Charqueada",
         "estado": "São Paulo",
+        "tipoImovel": "Casa",
         "adicionais": []
     }
 ]
