@@ -20,7 +20,7 @@
             <form>
                 <input type="text" placeholder="Filtrar por cidade" 
                     id="pesquisa" onkeypress="filtrarComEnter(event)">
-                
+                <button type="button" class="primary" onclick="filtrar()">Filtrar</button>
                 <label>
                     <input type="checkbox" id="filtroCasa" onclick="filtrar()"> Casa
                 </label>
@@ -28,7 +28,8 @@
                     <input type="checkbox" id="filtroApartamento" onclick="filtrar()"> Apartamento
                 </label>
                 
-                <button type="button" class="primary" onclick="filtrar()">Filtrar</button>
+                <button type="button" class="primary" onclick="mostrarFavoritos()">Meus favoritos</button>
+                <button type="button" class="primary" onclick="mostrarTodosOsImoveis()">Mostrar Todos</button>
             </form>
 
             <section class="results" id="lista-imoveis"></section>
