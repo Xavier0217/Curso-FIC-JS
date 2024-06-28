@@ -43,7 +43,7 @@ function criarImovelHTML(imovel) {
     if (imovel.favorito) {
         favorito.setAttribute("src", "img/favorito.png");
     } else {
-        favorito.setAttribute("src", "img/naofavorito.png");
+        favorito.setAttribute("src", "img/naoFavorito.png");
     }
 
     favorito.setAttribute("class", "favorito");
@@ -122,7 +122,7 @@ function favoritar(id) {
     const imovel = imoveis.find(imovel => imovel.id === id);
 
     if (fav.getAttribute("src") === "img/favorito.png") {
-        fav.setAttribute("src", "img/naofavorito.png");
+        fav.setAttribute("src", "img/naoFavorito.png");
         imovel.favorito = false;
     } else {
         fav.setAttribute("src", "img/favorito.png");
