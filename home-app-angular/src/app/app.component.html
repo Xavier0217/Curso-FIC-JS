@@ -1,10 +1,12 @@
 <main>
-  <a>
+  <a [routerLink]="['/']">
     <header class="brand-name">
         <img class="brand-logo" alt="logo" src="logo.svg">
     </header>
 </a>
 
-<app-home></app-home>
+<section class="content">
+  <router-outlet></router-outlet>
+</section>
 
 </main>

@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { Imovel } from '../imovel';
 import { ImovelService } from '../imovel.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -18,31 +21,29 @@ export class HomeComponent {
     this.imoveisFiltrados = this.imoveisDB; // Inicializar com todos os imóveis
   }
 
-  listarImoveisComFiltro(texto: string) {
-    const filtroCasa = (document.getElementById("filtroCasa") as HTMLInputElement).checked;
-    const filtroApartamento = (document.getElementById("filtroApartamento") as HTMLInputElement).checked;
-  
-    const textoM = this.removerAcentos(texto.toUpperCase());
-  
+  listarImoveisComFiltro(texto: String) {
+    
+    if (texto == "") {
+        this.imoveisDB = this.imovelService.buscarTodosImoveis()
+    } else {
+        const imoveisFiltrados: Imovel[] = []
 
-    this.imoveisFiltrados = [];
-  
-    for (let i = 0; i < this.imoveisDB.length; i++) {
-      const imovel = this.imoveisDB[i];
-  
-      const nomeImovelIM = this.removerAcentos(imovel.nome.toUpperCase());
-      const cidadeImovelIM = this.removerAcentos(imovel.cidade.toUpperCase());
-      const estadoImovelIM = this.removerAcentos(imovel.estado.toUpperCase());
-      const tipoImovel = imovel.tipoImovel.toUpperCase();
-  
-      const correspondeTipo = (!filtroCasa && !filtroApartamento) || (filtroCasa && tipoImovel === "CASA") || (filtroApartamento && tipoImovel === "APARTAMENTO");
-      const correspondePesquisa = texto === "" || nomeImovelIM.includes(textoM) || cidadeImovelIM.includes(textoM) || estadoImovelIM.includes(textoM);
-  
-      if (correspondeTipo && correspondePesquisa) {
-        this.imoveisFiltrados.push(imovel);
-      }
+        for (let i = 0; i < this.imoveisDB.length; i++) {
+            const imovel = this.imoveisDB[i]
+
+            const textoM = this.removerAcentos(texto.toUpperCase())
+            const cidadeImovelM = this.removerAcentos(imovel.cidade.toUpperCase())
+            const estadoImovelM = this.removerAcentos(imovel.estado.toUpperCase())
+
+            if (cidadeImovelM.search(textoM) == 0 ||
+                estadoImovelM.search(textoM) == 0) {
+
+                imoveisFiltrados.push(imovel)
+            }
+        }
+        this.imoveisDB = imoveisFiltrados
     }
-  }
+}
   
   removerAcentos(str: string) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
