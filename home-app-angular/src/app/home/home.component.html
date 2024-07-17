@@ -2,6 +2,14 @@
     <form>
         <input type="text" #texto placeholder="Filtrar...">
         <button class="primary" type="button" (click)="listarImoveisComFiltro(texto.value)">Filtrar</button>
+        <button class="primary alinha" type="button" (click)="mostrarFavoritos()">Meus Favoritos</button>
+        <button class="primary alinha" type="button" (click)="mostrarTodos()">Mostrar Todos</button>
+
+        <input type="radio" class="alinha" name="tipo" (click)="filtrarTipo('Apartamento')">
+        <label for="apto" class="alinha">Apartamento</label>
+
+        <input type="radio" class="alinha" name="tipo" (click)="filtrarTipo('Casa')">
+        <label for="casa" class="alinha">Casa</label>
     </form>
 
     <section class="results">
@@ -12,6 +20,14 @@
             <h2 class="listing-heading">{{imovel.nome}}</h2>
             <p class="listing-location">{{imovel.cidade}}, {{imovel.estado}}</p>
             <a [routerLink]="['/detalhes', imovel.id]">Veja mais</a>
+
+            <img src="maps.png" alt="Mapa" class="favorito" (click)="abrirMapa(imovel)">
+
+            @if (imovel.favorito == false) {
+                <img class="favorito" alt="Coracao" src="naoFavorito.png" (click)="favoritar(imovel)">
+            } @else {
+                <img class="favorito" alt="Coracao" src="favorito.png" (click)="favoritar(imovel)">
+            }
 
         </section>
     }

@@ -11,5 +11,7 @@ export interface Imovel {
     estado: String
     tipoImovel: String
     favorito: boolean
+    latitude: String
+    longitude: String
     adicionais: Propriedades[]
 }

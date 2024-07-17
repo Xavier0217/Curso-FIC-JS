@@ -5,6 +5,17 @@ section {
   section form {
     margin-left: 45px;
   }
+
+  .favorito {
+    float: right;
+    margin-right: 30px;
+    width: 6%;
+    cursor: pointer;
+  }
+
+  .alinha {
+    margin-left: 5px;
+  }
   
   .results {
     display: grid;
