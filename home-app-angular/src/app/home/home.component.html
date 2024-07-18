@@ -13,7 +13,7 @@
     <section class="results">
         @for (imovel of imoveisDB; track $index) {
         <section class="listing">
-
+            
             <img class="listing-photo" src="{{ imovel.url_foto }}" alt="Foto">
             <h2 class="listing-heading">{{imovel.nome}}</h2>
             <p class="listing-location">{{imovel.cidade}}, {{imovel.estado}}</p>

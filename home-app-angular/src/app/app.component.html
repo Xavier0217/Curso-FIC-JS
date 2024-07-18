@@ -1,18 +1,11 @@
 <main>
   <a [routerLink]="['/']">
     <header class="brand-name">
-        <img class="brand-logo" alt="logo" src="logo.svg">
+      <img class="brand-logo" alt="logo" src="logo.svg">
     </header>
-</a>
+  </a>
 
-<section class="content">
-  <router-outlet></router-outlet>
-</section>
-
-<div>
-  <button type="button" class="primary alinha">Alugar</button>
-  <button type="button" class="primary alinha">Comprar</button>
-  <button type="button" class="primary alinha">Calcular financiamento</button>
-</div>
-
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>

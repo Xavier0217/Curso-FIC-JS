@@ -1,3 +1,5 @@
+<img src="setaVoltar.png" alt="Voltar" class="voltar cursor" (click)="voltarHome()">
+
 <section class="content">
     <article>
         <img alt="Foto" class="listing-photo" src="{{imovel?.url_foto}}">
@@ -13,5 +15,11 @@
                 }
         </ul>
     </section>
+
+    <div>
+        <button type="button" class="primary alinha cursor" (click)="abrirPaginaAluguel()">Alugar</button>
+        <button type="button" class="primary alinha cursor" (click)="abrirPaginaFinanciamento()">Calcular financiamento</button>
+      </div>
+      
     </article>
 </section>

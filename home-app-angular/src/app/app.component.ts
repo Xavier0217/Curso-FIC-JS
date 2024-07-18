@@ -7,8 +7,9 @@ import { HomeComponent } from './home/home.component';
   standalone: true,
   imports: [RouterOutlet, RouterModule, HomeComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'home-app-angular';
 }
+

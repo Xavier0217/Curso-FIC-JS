@@ -17,6 +17,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "48.8566",
             "longitude": "2.3522",
+            "preco": 1200000,
             "adicionais": [
                 {
                     "chave": "Quartos disponiveis",
@@ -25,6 +26,20 @@ export class ImovelService {
                 {
                     "chave": "Piscina",
                     "valor": "sim"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 300
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 5000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 60000
                 }
             ]
         },
@@ -38,10 +53,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "40.7128",
             "longitude": "-74.0060",
+            "preco": 500000,
             "adicionais": [
                 {
                     "chave": "Banheiro",
                     "valor": 1
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 150
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 2000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 24000
                 }
             ]
         },
@@ -55,6 +85,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-22.9068",
             "longitude": "-43.1729",
+            "preco": 3500000,
             "adicionais": [
                 {
                     "chave": "Quartos disponiveis",
@@ -68,6 +99,20 @@ export class ImovelService {
                     "chave": "Arvores",
                     "valor": "Bastante"
                 }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 1000
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 15000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 180000
+                }
             ]
         },
         {
@@ -80,6 +125,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "34.0522",
             "longitude": "-118.2437",
+            "preco": 1800000,
             "adicionais": [
                 {
                     "chave": "Piscina",
@@ -88,6 +134,20 @@ export class ImovelService {
                 {
                     "chave": "Jardim",
                     "valor": "sim"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 400
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 7000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 84000
                 }
             ]
         },
@@ -101,10 +161,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "51.5074",
             "longitude": "-0.1278",
+            "preco": 2500000,
             "adicionais": [
                 {
                     "chave": "Garagem",
                     "valor": "2 vagas"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 500
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 8000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 96000
                 }
             ]
         },
@@ -118,10 +193,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-33.8688",
             "longitude": "151.2093",
+            "preco": 3000000,
             "adicionais": [
                 {
                     "chave": "Quintal",
                     "valor": "grande"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 600
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 9000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 108000
                 }
             ]
         },
@@ -135,10 +225,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "35.6895",
             "longitude": "139.6917",
+            "preco": 2800000,
             "adicionais": [
                 {
                     "chave": "Área de lazer",
                     "valor": "piscina e churrasqueira"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 700
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 10000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 120000
                 }
             ]
         },
@@ -152,10 +257,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "25.2769",
             "longitude": "55.2963",
+            "preco": 1500000,
             "adicionais": [
                 {
                     "chave": "Segurança",
                     "valor": "portaria 24h"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 800
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 12000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 144000
                 }
             ]
         },
@@ -169,10 +289,25 @@ export class ImovelService {
             "favorito": false,
             "latitude": "22.3193",
             "longitude": "114.1694",
+            "preco": 2000000,
             "adicionais": [
                 {
                     "chave": "Academia",
                     "valor": "sim"
+                }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 600
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 11000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 132000
                 }
             ]
         },
@@ -186,14 +321,33 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-33.9249",
             "longitude": "18.4241",
+            "preco": 3200000,
             "adicionais": [
                 {
                     "chave": "Vista panorâmica",
                     "valor": "serra"
                 }
+            ],
+            "aluguel": [
+                {
+                    "chave": "Diária",
+                    "valor": 700
+                },
+                {
+                    "chave": "Aluguel Mensal",
+                    "valor": 13000
+                },
+                {
+                    "chave": "Aluguel Anual",
+                    "valor": 156000
+                }
             ]
         }
     ];
+    
+    
+    
+    
     
 
 
