@@ -1,6 +1,5 @@
 <section>
-    <form>
-        <input type="text" #texto placeholder="Filtrar...">
+        <input (keydown.enter)="listarImoveisComFiltro(texto.value)" type="text" #texto placeholder="Filtrar...">
         <button class="primary" type="button" (click)="listarImoveisComFiltro(texto.value)">Filtrar</button>
         <button class="primary alinha" type="button" (click)="mostrarFavoritos()">Meus Favoritos</button>
         <button class="primary alinha" type="button" (click)="mostrarTodos()">Mostrar Todos</button>
@@ -10,7 +9,6 @@
 
         <input type="radio" class="alinha" name="tipo" (click)="filtrarTipo('Casa')">
         <label for="casa" class="alinha">Casa</label>
-    </form>
 
     <section class="results">
         @for (imovel of imoveisDB; track $index) {
